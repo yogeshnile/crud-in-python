@@ -1,4 +1,15 @@
+#############################################
+#         Pushup Logger Flask-App           #
+#-------------------------------------------#
+#  Author   : Yogesh Nile                   #
+#  Email    : yogeshnile.work4u@gmail.com   #
+#  Twitter  : twitter.com/YogeshNile        #
+#  GitHub   : github.com/yogeshnile         #
+#############################################
+
 from flask import Blueprint, render_template, url_for
+
+#On this file all basic opration done like maitain profile, pushup etc
 
 main = Blueprint('main',__name__)
 

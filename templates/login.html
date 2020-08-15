@@ -1,3 +1,14 @@
+<!--
+#############################################
+#         Pushup Logger Flask-App           #
+#-------------------------------------------#
+#  Author   : Yogesh Nile                   #
+#  Email    : yogeshnile.work4u@gmail.com   #
+#  Twitter  : twitter.com/YogeshNile        #
+#  GitHub   : github.com/yogeshnile         #
+#############################################
+-->
+
 {% extends "base.html" %} {% block head %} {{ super() }}
 <link
   rel="stylesheet"
@@ -16,6 +27,7 @@
         name="email"
         aria-describedby="emailHelp"
         placeholder="Enter email"
+        required
       />
     </div>
     <div class="form-group">
@@ -26,6 +38,7 @@
         id="password"
         name="password"
         placeholder="Password"
+        required
       />
     </div>
     <div class="form-check">

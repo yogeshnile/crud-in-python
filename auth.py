@@ -1,4 +1,15 @@
+#############################################
+#         Pushup Logger Flask-App           #
+#-------------------------------------------#
+#  Author   : Yogesh Nile                   #
+#  Email    : yogeshnile.work4u@gmail.com   #
+#  Twitter  : twitter.com/YogeshNile        #
+#  GitHub   : github.com/yogeshnile         #
+#############################################
+
 from flask import Blueprint, render_template, url_for, redirect, request
+
+#On this file all auth opration done like singup, login, logout etc
 
 auth = Blueprint('auth',__name__)
 
@@ -22,7 +33,7 @@ def login():
 def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
-    
+
     return redirect(url_for('main.profile'))
 
 @auth.route('/logout')
