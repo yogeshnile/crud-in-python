@@ -22,12 +22,21 @@
         <td>{{ workout.pushups }}</td>
         <td>{{ workout.date_posted.strftime('%m/%d/%Y') }}</td>
         <td>{{ workout.comment }}</td>
-          <a href="#" class="btn btn-outline-primary" role="button">
+        <td>
+          <a
+            href="{{ url_for('main.update_workout', workout_id=workout.id) }}"
+            class="btn btn-outline-primary"
+            role="button"
+          >
             Edit
           </a>
         </td>
         <td>
-          <a href="#" class="btn btn-outline-danger" role="button">
+          <a
+            href="{{ url_for('main.delete_workout', workout_id=workout.id) }}"
+            class="btn btn-outline-danger"
+            role="button"
+          >
             Delete
           </a>
         </td>
