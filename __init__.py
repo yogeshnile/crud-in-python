@@ -16,6 +16,7 @@ db = SQLAlchemy()
 
 #flask app will create app using below function
 #run command 
+#debug mode on = export FLASK_DEBUG=1
 #export FLASK_APP=(NAME OF THE FLODER) 
 #flask run
 def create_app():
@@ -43,7 +44,6 @@ def create_app():
     #connet to auth file in flask app
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
-
 
     return app
     

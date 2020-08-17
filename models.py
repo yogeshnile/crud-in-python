@@ -14,7 +14,7 @@ from datetime import datetime
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
+    password = db.Column(db.String(256))
     name = db.Column(db.String(100))
     workouts = db.relationship('Workout', backref='author', lazy=True)
 

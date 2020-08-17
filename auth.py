@@ -7,11 +7,11 @@
 #  GitHub   : github.com/yogeshnile         #
 #############################################
 
-from flask import Blueprint, render_template, url_for, redirect, request
+from flask import Blueprint, render_template, url_for, redirect, request, flash, abort
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
 from . import db
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 
 #On this file all auth opration done like singup, login, logout etc
 
@@ -58,3 +58,24 @@ def login_post():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
+
+@auth.route('/profile', methods=['POST'])
+@login_required
+def profile_post():
+    current_password = request.form.get('current_password')
+    new_password = request.form.get('new_password')
+    repate_password = request.form.get('repate_password')
+
+    if new_password != repate_password:
+        flash('New password and Repate password Does not match')
+        return redirect(url_for('main.profile'))
+    else:
+        user_pass = User.query.filter_by(email=current_user.email).first()
+        
+        if check_password_hash(user_pass.password, current_password):
+            user_pass.password = generate_password_hash(new_password, method='sha256')
+            db.session.commit()
+            return redirect(url_for('auth.logout'))
+        else:
+            flash('You entered worng password')
+            return redirect(url_for('main.profile'))
