@@ -1,0 +1,53 @@
+<!--
+#############################################
+#         Pushup Logger Flask-App           #
+#-------------------------------------------#
+#  Author   : Yogesh Nile                   #
+#  Email    : yogeshnile.work4u@gmail.com   #
+#  Twitter  : twitter.com/YogeshNile        #
+#  GitHub   : github.com/yogeshnile         #
+#############################################
+-->
+{% extends "base.html" %} 
+{% block head %} 
+  {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'extended_beauty.css') }}"/>
+
+{% endblock %}
+<!--====================================================================================-->
+{% block content %}
+<h1>Welcome, {{ name }}!</h1>
+<!--====================================================================================-->
+<div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/profile">
+    <h2>Change Password</h2>
+    <hr>
+<!--====================================================================================-->
+    <div class="form-group">
+      <label for="password">Current Password</label>
+      <input type="password" class="form-control" id="password" name="current_password" aria-describedby="emailHelp" placeholder="Enter Current Password" required/>
+    </div>
+<!--====================================================================================-->
+	{% with messages = get_flashed_messages() %} 
+    {% if messages %}
+    <div class="notification is-danger">
+      <p style="color: red">{{ messages[0] }}</p>
+    </div>
+    {% endif %} 
+    {% endwith %}
+<!--====================================================================================-->   
+    <div class="form-group">
+      <label for="password">New Password</label>
+      <input type="password" class="form-control" id="password" name="new_password" aria-describedby="emailHelp" placeholder="Enter New Password" required/>
+    </div>
+<!--====================================================================================-->
+    <div class="form-group">
+      <label for="password">Repeat Password</label>
+      <input type="password" class="form-control" id="password" name="repate_password" aria-describedby="emailHelp" placeholder="Enter Repeat Password" required/>
+    </div>
+<!--====================================================================================-->
+	<button type="submit" class="btn btn-primary">Change Password</button>
+  </form>
+</div>
+<!--====================================================================================-->
+{% endblock %}

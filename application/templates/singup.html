@@ -1,0 +1,42 @@
+<!--
+#############################################
+#         Pushup Logger Flask-App           #
+#-------------------------------------------#
+#  Author   : Yogesh Nile                   #
+#  Email    : yogeshnile.work4u@gmail.com   #
+#  Twitter  : twitter.com/YogeshNile        #
+#  GitHub   : github.com/yogeshnile         #
+#############################################
+-->
+
+{% extends "base.html" %} 
+{% block head %} 
+  {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'extended_beauty.css') }}"/>
+
+{% endblock %}
+<!--====================================================================================-->
+{% block content %}
+<div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/singup">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter full name" required/>
+    </div>
+<!--====================================================================================-->
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required/>
+    </div>
+<!--====================================================================================-->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required/>
+    </div>
+<!--====================================================================================-->
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>
+<!--====================================================================================-->
+{% endblock %}
