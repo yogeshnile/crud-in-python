@@ -68,6 +68,10 @@ In this repo I have develop simple crud application in flask app.
 
 6 directories, 33 files
 ```
+
+# Technology used in Project :hotsprings:
+<img target="_blank" src="https://github.com/yogeshnile/technology/blob/master/Flask.png" width="300">
+
 ## ScreenShot :camera_flash:
 ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/1.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/2.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/3.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/4.png)
 
