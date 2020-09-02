@@ -1,8 +1,28 @@
 # crud in python :notebook: &nbsp;[![](https://camo.githubusercontent.com/17fa56d1fbad7bb4082c9711a77b984b85e79446/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e362d627269676874677265656e2e737667)](https://python.org)
-
+In this repo I have develop simple crud application in flask app.
  - [[Demo]](https://crud-flask.herokuapp.com/)
 
 [![](https://camo.githubusercontent.com/2fb0723ef80f8d87a51218680e209c66f213edf8/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d707974686f6e2e737667)](https://python.org)
+
+# How to run the project? :thinking:
+**1).** Run all command manually
+  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/crud-in-python.git`
+  - Move in crud-in-python repository  `cd crud-in-python`
+  - Create new virtual python environment  `python3 -m venv venv`
+  - Activate virtual python environment  `source venv/bin/activate`
+  - Install all the libraries mentioned in [requirements.txt](https://github.com/yogeshnile/crud-in-python/blob/master/requirements.txt)  using  `pip install -r requirements.txt`
+  - Run FlaskApp file  `python app.py`
+  - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
+  - Hurray! That's it. <br>
+
+
+**2).** Run Shell Script
+  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/unix.git`
+  - Give execute permission to [crud-in-python.sh](https://github.com/yogeshnile/unix/blob/master/crud-in-python.sh) file via  `chmod +x crud-in-python.sh`
+  - Run crud-in-python.sh file using `./crud-in-python.sh`
+  - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
+  - Finished...
+
 
 ## Bug / Feature Request :man_technologist:
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/yogeshnile/crud-in-python/issues/new) by including your search query and the expected result.
