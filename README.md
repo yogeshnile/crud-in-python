@@ -22,7 +22,54 @@ In this repo I have develop simple crud application in flask app.
   - Run crud-in-python.sh file using `./crud-in-python.sh`
   - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
   - Finished...
+ 
+# Directory Tree :cactus:
+```bash
+.
+├── application
+│   ├── auth.py
+│   ├── db.sqlite
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── main.py
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── auth.cpython-36.pyc
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── main.cpython-36.pyc
+│   │   └── models.cpython-36.pyc
+│   ├── static
+│   │   ├── beauty.css
+│   │   ├── extended_beauty.css
+│   │   └── images
+│   │       ├── muscle.ico
+│   │       ├── muscle.png
+│   │       └── pushup.png
+│   └── templates
+│       ├── all_workouts.html
+│       ├── base.html
+│       ├── create_workout.html
+│       ├── index.html
+│       ├── login.html
+│       ├── profile.html
+│       ├── singup.html
+│       └── update_workout.html
+├── app.py
+├── crud-in-python.sh
+├── Images
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   └── 4.png
+├── LICENSE
+├── Procfile
+├── README.md
+└── requirements.txt
 
+6 directories, 33 files
+```
+## ScreenShot :camera_flash:
+![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/1.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/2.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/3.png)    ![](https://github.com/yogeshnile/crud-in-python/blob/master/Images/4.png)
 
 ## Bug / Feature Request :man_technologist:
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/yogeshnile/crud-in-python/issues/new) by including your search query and the expected result.
